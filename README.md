@@ -51,7 +51,12 @@ interface range [porte VLAN 20]
 | Ping tra host di VLAN diverse | Fallisce (nessun router) | [da verificare] |
 
 ## Problemi incontrati
-nessuno 
+
+- **Problema:** il ping tra due PC della VLAN 10 non funzionava.
+- **Causa:** una delle due porte era ancora nella VLAN 1.
+- **Soluzione:** con `show vlan brief` ho trovato l'errore e ho assegnato la porta alla VLAN 10.
+
+ 
 
 ## Cosa ho imparato
 - Ho capito come una VLAN separa la rete a livello 2 anche su un unico switch fisico.
